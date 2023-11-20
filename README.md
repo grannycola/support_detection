@@ -42,7 +42,7 @@ sudo docker build -t support_detection .
 ```
 Run container:
 ```
-sudo docker run --memory=16g --gpus all -it -v $PWD:/app support_detection
+sudo docker run --memory=16g --gpus all -it support_detection
 ```
 Run training in docker bash:
 ```
