@@ -14,3 +14,38 @@ You will need to:
 python /home/$USERNAME/mmdetection/tools/train.py my_config.py
 ```
 or specify your mmdetecion path.
+
+# Dockerfile
+
+Required:
+- Nvidia GPU
+- Nvidia Driver.
+- Cuda 12.0.0
+- nvidia-container-runtime
+
+Check file content ```/etc/docker/daemon.json```
+It should look like:
+```
+{
+  "runtimes": {
+    "nvidia": {
+      "path": "/usr/bin/nvidia-container-runtime",
+      "runtimeArgs": []
+    }
+  },
+  "default-runtime": "nvidia"
+}
+```
+Build image:
+```
+sudo docker build -t support_detection .
+```
+Run container:
+```
+sudo docker run --memory=16g --gpus all -it -v $PWD:/app support_detection
+```
+Run training in docker bash:
+```
+python /mmdetection/tools/train.py my_config.py
+```
+Tested on Nvidia RTX 3090Ti with Cuda driver 12.0.0
