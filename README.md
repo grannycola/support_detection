@@ -4,7 +4,7 @@ You will need to:
 - clone this repository
 - change dir to repo dir
 - `git lfs pull`
-2. install mmdetection and mmcv
+2. Install mmdetection and mmcv
 
 # How to start train/val process:
 #### 1. Specify my_config.py for your device.
