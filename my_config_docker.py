@@ -2,7 +2,7 @@
 import os
 
 
-_base_ = f"/home/{os.environ['USER']}/mmdetection/configs/faster_rcnn/faster-rcnn_r50_fpn_2x_coco.py"
+_base_ = f"/mmdetection/configs/faster_rcnn/faster-rcnn_r50_fpn_2x_coco.py"
 
 train_cfg = dict(type='EpochBasedTrainLoop', max_epochs=2, val_interval=1)
 
@@ -24,7 +24,7 @@ metainfo = {
     ]
 }
 train_dataloader = dict(
-    batch_size=4,
+    batch_size=2,
     dataset=dict(
         data_root=data_root,
         metainfo=metainfo,
