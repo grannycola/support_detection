@@ -1,10 +1,10 @@
 # Important
-This project uses `git lfs`.
+1. This project uses `git lfs`.
 You will need to:
 - clone this repository
 - change dir to repo dir
 - `git lfs pull`
-- install mmdetection and mmcv
+2. install mmdetection and mmcv
 
 # How to start train/val process:
 #### 1. Specify my_config.py for your device.
