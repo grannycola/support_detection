@@ -20,7 +20,7 @@ or specify your mmdetecion path.
 Required:
 - Nvidia GPU
 - Nvidia Driver.
-- Cuda 12.0.0
+- Cuda 12.1.0
 - nvidia-container-runtime
 
 Check file content ```/etc/docker/daemon.json```
@@ -48,4 +48,4 @@ Run training in docker bash:
 ```
 python /mmdetection/tools/train.py my_config_docker.py
 ```
-Tested on Nvidia RTX 3090Ti with Cuda driver 12.0.0
+Tested on Nvidia RTX 3090Ti with Cuda driver 12.1.0
